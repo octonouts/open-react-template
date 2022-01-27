@@ -1,10 +1,9 @@
 name: Deploy Now
 
 on:
-  push
-  workflow_dispatch
-  repository_dispatch
-
+  repository_dispatch:
+    types: [on-demand-test]
+  
 jobs:
   deploy-now:
     runs-on: ubuntu-latest
