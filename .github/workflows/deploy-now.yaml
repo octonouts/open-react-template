@@ -1,8 +1,12 @@
 name: Deploy Now
 
 on:
+  push:
+  workflow_dispatch:
   repository_dispatch:
-    types: [on-demand-test]
+    types:
+      - on-demand
+      - on-test
   
 jobs:
   deploy-now:
